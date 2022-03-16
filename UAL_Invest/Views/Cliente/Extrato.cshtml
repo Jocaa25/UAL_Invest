@@ -1,0 +1,92 @@
+﻿
+
+
+<h3 style="color: gold">Seu Extrato</h3>
+<h4 style="color: gold">Aqui é onde você consegue consultar todo seu historico de compra e venda!</h4>
+<h4 style="color: gold">Com isso você pode como foram seus rendimentos!</h4>
+
+
+<br />
+<div class="user" align="right">
+    <h5 style="color: gold">Saldo Disponivel: R$ 250,00</h5>
+</div>
+
+
+
+<div class="row">
+    <div class="col">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Ativo:</label>
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Selecione o Tipo de Ativo</option>
+            <option value="1">Renda Fixa</option>
+            <option value="2">Renda Variavel</option>
+            <option value="3">Fundos</option>
+        </select>
+    </div>
+    <div class="col">
+
+        <div class="user" align="right">
+            <br />
+            <button type="submit" class="btn btn-outline-warning" asp-controller="Admin" asp-action="Index">Buscar</button>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<br />
+
+
+
+<table class="table">
+    <thead style="color: gold">
+        <tr>
+            <th scope="col">Nome Ativo</th>
+            <th scope="col">Data</th>
+            <th scope="col">Operação</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Total</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">LVBI11</th>
+            <td>03/01/2021</td>
+            <td>Compra</td>
+            <td>Fundos</td>
+            <td>10</td>
+            <td>R$ 98,00</td>
+            <td>R$ 980,00</td>
+
+
+        </tr>
+        <tr>
+            <th scope="row">LVBI11</th>
+            <td>10/06/2021</td>
+            <td>Venda</td>
+            <td>Fundos</td>
+            <td>10</td>
+            <td>R$ 120,00</td>
+            <td>R$ 1200,00</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Litecoin</th>
+            <td>10/02/2022</td>
+            <td>Compra</td>
+            <td>CriptoMoeda</td>
+            <td>5</td>
+            <td>R$ 556.84</td>
+            <td>R$ 2.784,20</td>
+
+        </tr>
+    </tbody>
+</table>
+<a class="btn btn-outline-warning " href="@Url.Action("Index","Cliente")">Voltar</a>
+
+<br />
+<br />

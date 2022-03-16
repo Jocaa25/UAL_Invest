@@ -1,0 +1,100 @@
+﻿
+
+
+<h3 style="color: gold">Seus Ativos</h3>
+<br />
+<div class="user" align="right">
+    <h5 style="color: gold">Saldo Disponivel: R$ 250,00</h5>
+</div>
+
+
+
+<div class="row">
+    <div class="col">
+        <label class="mr-sm-2" for="inlineFormCustomSelect">Ativo:</label>
+        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Selecione o Tipo de Ativo</option>
+            <option value="1">Renda Fixa</option>
+            <option value="2">Renda Variavel</option>
+            <option value="3">Fundos</option>
+        </select>
+    </div>
+    <div class="col">
+
+        <div class="user" align="right">
+            <br/>
+            <button type="submit" class="btn btn-outline-warning" asp-controller="Admin" asp-action="Index">Buscar</button>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<br/>
+
+
+
+<table class="table">
+    <thead style="color: gold">
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Valor Unitario</th>
+            <th scope="col">Valor Investido</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">BRCO11</th>
+            <td>Fundos</td>
+            <td>1</td>
+            <td>R$ 95,75</td>
+            <td>R$ 95,75</td>
+
+        </tr>
+        <tr>
+            <th scope="row">MGLU3</th>
+            <td>Açoes</td>
+            <td>10</td>
+            <td>R$ 5,13</td>
+            <td>R$ 51,30</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Litecoin</th>
+            <td>Criptomoeda</td>
+            <td>5</td>
+            <td>R$ 556.84</td>
+            <td>R$ 2.784,20</td>
+
+        </tr>
+    </tbody>
+</table>
+<div class="user" align="right">
+    <h5 style="color: gold">Total investido: R$2.931,25</h5>
+</div>
+
+<br />
+<br />
+
+
+
+<div class="row">
+    <div class="col">
+        <h2 style="color: gold">Gerenciamento da Carteira</h2>
+
+        <a class="btn btn-outline-warning " href="@Url.Action("Comprar","Cliente")">Comprar</a>
+        <a class="btn btn-outline-warning " href="@Url.Action("Vender","Cliente")">Vender</a>
+
+        <a class="btn btn-outline-warning " href="@Url.Action("Depositar","Cliente")">Adicionar Fundos</a>
+        <a class="btn btn-outline-warning " href="@Url.Action("Saque","Cliente")">Resgatar rendimentos</a>
+        <a class="btn btn-outline-warning " href="@Url.Action("Extrato","Cliente")">Extrato</a>
+
+
+
+
+
+
+    </div>
+</div>

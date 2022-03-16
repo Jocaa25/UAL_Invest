@@ -1,0 +1,59 @@
+﻿<div class="text-left">
+    <div class=" text-right">
+        <a href="#">Ola @User.Identity.Name</a>
+    </div>
+    <h1 style="color: gold" class="display-4">Meus Clientes</h1>
+
+    <br />
+    <br />
+</div>
+
+
+
+<div>
+    <form>
+        <div class="row">
+            <div class="col">
+                <label for="NomeAtivo">Nome</label>
+                <input type="text" class="form-control" placeholder="Nome do Cliente">
+            </div>
+            <div class="col">
+                <label for="e-mail">E-mail</label>
+                <input type="email" class="form-control" placeholder="E-mail">
+            </div>
+        </div>
+        <br />
+         <button type="submit" class="btn btn-outline-warning" asp-controller="Gerente" asp-action="Index">Pesquisar</button>
+
+    </form>
+</div>
+
+<br />
+<br />
+<h3 style="color: gold">Lista de Clientes</h3>
+<table class="table">
+    <thead style="color: gold">
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Saldo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Cleiton Santos</th>
+            <td>25</td>
+            <td>R$ 250,00</td>
+        </tr>
+        <tr>
+            <th scope="row">Robert Figueira</th>
+            <td>46</td>
+            <td>R$ 200.000,00</td>
+        </tr>
+        <tr>
+            <th scope="row">Rosana Pereira</th>
+            <td>47</td>
+            <td>R$ 3.000.000,00</td>
+        </tr>
+    </tbody>
+</table>

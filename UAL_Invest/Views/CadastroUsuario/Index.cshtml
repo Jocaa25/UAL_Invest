@@ -1,0 +1,60 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Cadastro da Ual Invest";
+}
+
+<div class="text-center">
+    <h1 style="color: gold" class="display-4">Olá, Seja Bem vindo!</h1>
+    <br />
+    <br />
+    <br />
+
+</div>
+<div>
+    <h5>Para abrir sua conta na Ual precisamos saber um pouco mais sobre quem você é, nao se preocupe, é totalmente gratis e com total segurança, Vamos lá?</h5>
+    <p>Caso já tenha uma conta, basta <a style="color: gold"  href="Login">clicar aqui!</a></p>
+</div>
+
+<div>
+    <form asp-controller="CadastroUsuario" asp-action="CadastrarUsuario" method="post">
+        <div class=" form-row">
+            <div class="col">
+                <label for="nome">Nome</label>
+                <input type="text" asp-for="Nome" class="form-control" placeholder="Insira seu nome">
+            </div>
+
+            <div class="col">
+                <label for="email">Email</label>
+                <input type="email" asp-for="Email" class="form-control" placeholder="Insira seu E-mail">
+            </div>
+        </div>
+        <br />
+
+        <div class=" form-row">
+            <div class="col">
+                <label for="data">Data de nascimento</label>
+                <input type="date" asp-for="DataDeNascimento" class="form-control" placeholder="Insira sua data de nascimento">
+            </div>
+
+            <div class="col">
+                <label for="senha">Senha</label>
+                <input type="password" asp-for="Senha" class="form-control" placeholder="Insira sua Senha">
+            </div>
+        </div>
+        <br />
+        <div class=" form-row">
+            <div class="col">
+                <label for="Gerente">Gerente Responsavel</label>
+                <input type="text" asp-for="GerenteId" class="form-control" placeholder="Insira o código do Gerente Responsavel">
+            </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-warning">Cadastrar</button>
+        <br />
+        <p>Não tem um Gerente? <a style="color: gold" href="FaleConosco">clique aqui</a> e fale com nossa equipe</p>
+
+        <p>Esqueceu a senha? <a style="color: gold" href="Home">clique aqui </a></p>
+
+
+    </form>
+</div>

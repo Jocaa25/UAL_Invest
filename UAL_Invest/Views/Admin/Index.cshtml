@@ -1,0 +1,54 @@
+﻿
+   <style>
+        h1 {
+            color: gold;
+            text-shadow: inherit;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .bck {
+            position: relative;
+            width: auto;
+            height: auto;
+        }
+
+        .texto {
+            position: absolute;
+            color: black;
+            text-align: left;
+            top: 100px;
+            width: 250px;
+            line-height: 30px;
+            height: 30px;
+        }
+
+        .Titulo {
+            color: gold;
+            text-align: center
+        }
+     
+
+      </style>
+
+    <div class="bck">
+        <img src="~/Imagens/Admin/AdmPage.png" class="img-fluid" alt="Ual Invest">
+
+        <div class="texto">
+            <br />
+            <br />
+            <br />
+            <br />
+            <a class="btn btn-outline-warning btn-block" href="@Url.Action("CadastrarGerente","Admin")">Gerente</a>
+            <br />
+            <br />
+            <br />
+            <br />
+            <a class="btn btn-outline-warning btn-block" href="@Url.Action("CadastrarAtivos","Admin")">Ativo</a>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+

@@ -1,0 +1,72 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        h1 {
+            color: gold;
+            text-shadow: inherit;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .bck {
+            position: relative;
+            width: auto;
+            height: auto;
+        }
+
+        .texto {
+            position: absolute;
+            background-color: white;
+            color: black;
+            text-align: left;
+            top: 100px;
+            width: 250px;
+            line-height: 30px;
+            height: 30px;
+        }
+
+        .Titulo {
+            color: gold;
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bck">
+        <img src="~/Imagens/Login/BLogin.png" class="img-fluid" alt="Ual Invest">
+
+        <div class="texto">
+            <h1>Login</h1>
+            <br />
+            <form asp-controller="Login" asp-action="Logar" method="post">
+                @Html.ValidationSummary(true, "", new  { @class = "text-danger"})
+                <div class="mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" asp-for="Email" class="form-control" placeholder="Insira seu E-mail">
+                </div>
+                <div class="mb-3">
+                    <label for="senha">Senha</label>
+                    <input type="password"asp-for="Senha" class="form-control" placeholder="Insira sua Senha">
+                </div>
+                <button type="submit" class="btn btn-outline-warning">Logar</button>
+                <br />
+                <p>Esqueceu a senha? <a style="color: gold" href="Home">clique aqui!</a></p>
+                <p>Nao tem uma conta? <a style="color: gold" href="CadastroUsuario">clique aqui!</a></p>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+</html>

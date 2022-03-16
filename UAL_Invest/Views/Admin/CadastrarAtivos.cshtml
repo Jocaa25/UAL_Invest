@@ -1,0 +1,78 @@
+﻿@model Ativo
+
+<div class="text-left">
+    <h1 style="color: gold" class="display-4">Cadastro de Ativos</h1>
+    <br />
+    <br />
+
+
+</div>
+
+<div>
+    <form asp-controller="Admin" asp-action="CadastrarNovoAtivo" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="NomeAtivo">Nome</label>
+                <input type="text" asp-for="NomeAtivo" class="form-control" placeholder="Nome do Ativo">
+            </div>
+            <div class="col">
+                <label for="preçoAtivo">Preço</label>
+                <input type="text" asp-for="PrecoAtivo" class="form-control" placeholder="Valor do Ativo">
+            </div>
+        </div>
+        <br />
+        <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+                <label class="mr-sm-2" for="inlineFormCustomSelect">Preference</label>
+                <select asp-for="TipoRendaId" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected>Selecione o Tipo de Ativo</option>
+                    <option value="1">Ações</option>
+                    <option value="2">Fundos</option>
+                    <option value="3">Criptomoedas</option>
+                    <option value="4">Tesouro Direto</option>
+                    <option value="5">Poupança</option>
+
+                </select>
+            </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-outline-warning"</button>
+
+    </form>
+</div>
+
+<br />
+<br />
+<h3 style="color: gold">Lista de Ativos</h3>
+<table class="table">
+    <thead style="color: gold">
+        <tr>
+            <th scope="col">Ativo</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Grupo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">OIBR3</th>
+            <td>R$ 0,80</td>
+            <td>Ações</td>
+        </tr>
+        <tr>
+            <th scope="row">ABCP11</th>
+            <td>R$ 73.80</td>
+            <td>Fundo de Investimento</td>
+        </tr>
+        <tr>
+            <th scope="row">Ethereum</th>
+            <td>R$ 14.021,62</td>
+            <td>CriptoMoeda</td>
+        </tr>
+
+    </tbody>
+    
+
+</table>
+<br />
+
+<a class="btn btn-outline-warning " href="@Url.Action("Index","Admin")">Voltar</a>
